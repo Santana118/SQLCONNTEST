@@ -73,9 +73,10 @@ namespace SQLCONNTEST
                     if (sqlDataReader.HasRows)
                     {
                         Console.WriteLine("Show All Customer List");
+                        Console.WriteLine("{0,-3} {1,-20}", "ID", "Customer Name");
                         while (sqlDataReader.Read())
                         {
-                            Console.WriteLine(sqlDataReader[0] + " - " + sqlDataReader[1]);
+                            Console.WriteLine("{0,-3} {1,-20}", sqlDataReader[0], sqlDataReader[1]);
                         }
                     }
                     else
