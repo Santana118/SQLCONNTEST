@@ -12,15 +12,15 @@ CREATE TABLE Stock(
 
 )
 
-CREATE TABLE OrderList(
-	id int IDENTITY(1,1) PRIMARY KEY,
-	idConsumer int NOT NULL,
-	idStock int NOT NULL,
-	quantity int,
+-- CREATE TABLE OrderList(
+-- 	id int IDENTITY(1,1) PRIMARY KEY,
+-- 	idConsumer int NOT NULL,
+-- 	idStock int NOT NULL,
+-- 	quantity int,
 
-	CONSTRAINT FK_Consumer FOREIGN KEY (idCOnsumer) REFERENCES Customer(id),
-	CONSTRAINT FK_Stock FOREIGN KEY (idStock) REFERENCES Stock(id)
-)
+-- 	CONSTRAINT FK_Consumer FOREIGN KEY (idCOnsumer) REFERENCES Customer(id),
+-- 	CONSTRAINT FK_Stock FOREIGN KEY (idStock) REFERENCES Stock(id)
+-- )
 
 
 INSERT INTO Customer VALUES ('Giri Atma Santana');

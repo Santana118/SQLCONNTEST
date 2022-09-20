@@ -22,7 +22,7 @@ namespace SQLCONNTEST
                 Console.WriteLine("1. Show All Customer List ");
                 Console.WriteLine("2. Add new Customer ");
                 Console.WriteLine("3. Update Customer ");
-                Console.WriteLine("4. Update Customer ");
+                Console.WriteLine("4. Delete Customer ");
                 Console.WriteLine("0. Exit application ");
                 string option = Console.ReadLine();
                 switch (option)
@@ -45,6 +45,11 @@ namespace SQLCONNTEST
                         Console.WriteLine("Enter customer Name :");
                         customer.Name = Console.ReadLine();                  
                         program.updateCustomer(customer);
+                        break;
+                    case "4":
+                        Console.WriteLine("Enter customer ID :");
+                        customer.Id = Console.ReadLine();
+                        program.deleteCustomer(customer);
                         break;
                     default:
                         Console.WriteLine("Unrecognized User input");
